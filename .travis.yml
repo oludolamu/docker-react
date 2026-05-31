@@ -8,7 +8,7 @@ before_install:
 script: 
  - docker run -e CI=true oludolamu/docker-react npm run test
 
-
+####### instructions for travis to deploy to beanstalk
 deploy:
   provider: elasticbeanstalk
   region: eu-north-1
@@ -18,7 +18,5 @@ deploy:
   bucket_path: docker-react
   on:
     branch: master
-    env key
-    env secret
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: "$AWS_SECRET_KEY"
