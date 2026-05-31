@@ -13,5 +13,6 @@ RUN ["npm", "run", "build"]
 ####### copy results of npm run build and use to run nginx phase -- run is used because it is an image
 
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 
